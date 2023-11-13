@@ -11,8 +11,8 @@ pipeline {
             steps {
                 // log.info 'Starting' 
                 script { 
-                    echo 'Middle-1'
-                    echo 'Nothing to do!'
+                    log.info 'Middle-1'
+                    log.warning 'Nothing to do!'
                 }
             }
         }
