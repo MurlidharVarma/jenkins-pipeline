@@ -9,7 +9,7 @@ pipeline {
 	    stage("First") {
             steps {
                 echo "Something"
-                // greet "Traveller"
+                greet "Traveller"
             }
         }
 		stage ('Middle-1') {
