@@ -1,3 +1,12 @@
+// do the import
+import io.wcm.devops.jenkins.pipeline.utils.logging.LogLevel
+import io.wcm.devops.jenkins.pipeline.utils.logging.Logger
+import static io.wcm.devops.jenkins.pipeline.utils.ConfigConstants.*
+
+// initialize the logger 
+Logger.init(this, [ (LOGLEVEL) : LogLevel.WARN] )
+Logger log = new Logger(this)
+
 pipeline {
     agent any
     stages {
