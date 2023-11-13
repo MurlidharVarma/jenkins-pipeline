@@ -3,7 +3,7 @@
 //   [$class: 'GitSCMSource',
 //    remote: 'https://github.com/MurlidharVarma/jenkins-shared-library.git'])
 
-@Library('jenkins-shared-lib')
+@Library('jenkins-shared-lib') _
 
 pipeline {
     agent any
