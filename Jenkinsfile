@@ -1,7 +1,9 @@
-// do the import
-library identifier: 'jenkins-shared-library@main', retriever: modernSCM(
-  [$class: 'GitSCMSource',
-   remote: 'https://github.com/MurlidharVarma/jenkins-shared-library.git'])
+// // do the import
+// library identifier: 'jenkins-shared-library@main', retriever: modernSCM(
+//   [$class: 'GitSCMSource',
+//    remote: 'https://github.com/MurlidharVarma/jenkins-shared-library.git'])
+
+@Library('jenkins-shared-lib')
 
 pipeline {
     agent any
