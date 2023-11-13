@@ -16,10 +16,10 @@ pipeline {
                 }
             }
         }
-        stage("Middle-2") {
-            //HelloWorld obj = new HelloWorld();
-            //echo obj.sayHello("Hello World from Test")
-        }
+        // stage("Middle-2") {
+        //     HelloWorld obj = new HelloWorld();
+        //     echo obj.sayHello("Hello World from Test")
+        // }
         stage("Last") {
             steps {
                 echo "We're done"
