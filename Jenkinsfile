@@ -2,8 +2,10 @@ pipeline {
     agent none
     stages {
 	    stage("First") {
-            echo "Something"
-            greet "Traveller"
+            steps {
+                echo "Something"
+                // greet "Traveller"
+            }
         }
 		stage ('Middle-1') {
             steps {
@@ -19,7 +21,9 @@ pipeline {
             //echo obj.sayHello("Hello World from Test")
         }
         stage("Last") {
-            echo "We're done"
+            steps {
+                echo "We're done"
+            }
         }
     }
 }
