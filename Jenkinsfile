@@ -1,11 +1,7 @@
 // do the import
-import io.wcm.devops.jenkins.pipeline.utils.logging.LogLevel
-import io.wcm.devops.jenkins.pipeline.utils.logging.Logger
-import static io.wcm.devops.jenkins.pipeline.utils.ConfigConstants.*
-
-// initialize the logger 
-Logger.init(this, [ (LOGLEVEL) : LogLevel.WARN] )
-Logger log = new Logger(this)
+library identifier: 'jenkins-shared-library@main', retriever: modernSCM(
+  [$class: 'GitSCMSource',
+   remote: 'https://github.com/MurlidharVarma/jenkins-shared-library.git'])
 
 pipeline {
     agent any
@@ -13,15 +9,15 @@ pipeline {
 	    stage("First") {
             steps {
                 echo "Something"
-                // greet "Traveller"
+                greet "Traveller"
             }
         }
 		stage ('Middle-1') {
             steps {
                 // log.info 'Starting' 
                 script { 
-                    log.info 'Middle-1'
-                    log.warning 'Nothing to do!'
+                    // log.info 'Middle-1'
+                    // log.warning 'Nothing to do!'
                 }
             }
         }
